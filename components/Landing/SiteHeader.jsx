@@ -1,7 +1,7 @@
 import { NavItems } from "./LandingData";
 import NavLink from "./NavLink";
 
-export default function SiteHeader({ navOpen, setNavOpen }) {
+export default function SiteHeader({ navOpen, setNavOpen, onQuickAssist }) {
   function closeNav() {
     setNavOpen(false);
   }
@@ -37,12 +37,16 @@ export default function SiteHeader({ navOpen, setNavOpen }) {
           {NavItems.map((item) => (
             <NavLink key={item.href} href={item.href} label={item.label} onClick={closeNav} />
           ))}
-          <NavLink
-            href="#contact"
-            label="Tư vấn nhanh"
-            onClick={closeNav}
-            className="nav-cta"
-          />
+          <button
+            type="button"
+            className="nav-cta nav-cta-button"
+            onClick={() => {
+              closeNav();
+              onQuickAssist?.("urgent");
+            }}
+          >
+            Tư vấn nhanh
+          </button>
         </nav>
       </div>
     </header>

@@ -6,8 +6,8 @@ export default function ContactSection({ feedback, onSubmit }) {
           <p className="eyebrow">Liên hệ và hỗ trợ</p>
           <h2>Chỉ cần để lại thông tin, đội ngũ sẽ nhanh chóng đồng hành cùng bạn.</h2>
           <p>
-            Nếu bạn cần được hướng dẫn ngay, hãy để lại số điện thoại hoặc liên hệ trực tiếp qua
-            hotline để được hỗ trợ nhanh nhất.
+            Nếu bạn cần được hướng dẫn ngay, hãy để lại số điện thoại hoặc liên hệ trực tiếp qua hotline.
+            Form này cũng đã sẵn sàng để nối sang email, CRM hoặc webhook khi triển khai thật.
           </p>
 
           <div className="contact-cards">
@@ -41,6 +41,8 @@ export default function ContactSection({ feedback, onSubmit }) {
             Nhu cầu chính
             <select name="service" defaultValue="Tư vấn tổng quan">
               <option value="Tư vấn tổng quan">Tư vấn tổng quan</option>
+              <option value="Theo loại thú cưng">Tư vấn theo loại thú cưng</option>
+              <option value="Nghi thức cầu siêu hoặc thủy táng">Nghi thức cầu siêu hoặc thủy táng</option>
               <option value="Hỏa táng riêng">Hỏa táng riêng</option>
               <option value="Tưởng niệm và keepsake">Tưởng niệm và keepsake</option>
               <option value="Cần hỗ trợ gấp">Cần hỗ trợ gấp</option>

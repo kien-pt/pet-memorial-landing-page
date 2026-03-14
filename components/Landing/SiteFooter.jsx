@@ -1,4 +1,4 @@
-export default function SiteFooter() {
+export default function SiteFooter({ onQuickAssist }) {
   return (
     <>
       <footer className="site-footer">
@@ -12,7 +12,9 @@ export default function SiteFooter() {
       </footer>
 
       <div className="floating-actions" aria-label="Hành động nhanh">
-        <a href="#contact">Tư vấn nhanh</a>
+        <button type="button" onClick={() => onQuickAssist?.("urgent")}>
+          Tư vấn nhanh
+        </button>
         <a href="#contact">Liên hệ</a>
       </div>
     </>

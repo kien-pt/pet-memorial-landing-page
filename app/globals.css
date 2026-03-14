@@ -163,6 +163,12 @@ textarea {
   background: rgba(34, 49, 45, 0.08);
 }
 
+.nav-cta-button {
+  border: 0;
+  color: rgba(30, 39, 35, 0.88);
+  cursor: pointer;
+}
+
 .nav-toggle {
   display: none;
   width: 52px;
@@ -471,6 +477,7 @@ textarea {
 }
 
 .service-grid,
+.care-grid,
 .process-grid,
 .utility-grid,
 .testimonial-grid {
@@ -480,10 +487,73 @@ textarea {
 }
 
 .service-card,
+.care-card,
 .process-card,
 .utility-card,
 .testimonial-card {
   padding: 28px;
+}
+
+.care-card {
+  min-height: 100%;
+}
+
+.care-icon,
+.ritual-icon,
+.assist-option-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 16px;
+  background: rgba(67, 86, 79, 0.1);
+  color: var(--olive-deep);
+}
+
+.ritual-panel {
+  margin-top: 18px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 22px;
+}
+
+.ritual-copy h3,
+.assist-panel h2,
+.assist-response h3 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.08;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.ritual-list {
+  display: grid;
+  gap: 16px;
+}
+
+.ritual-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 250, 244, 0.52);
+  border: 1px solid rgba(30, 39, 35, 0.08);
+}
+
+.ritual-item h4 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.ritual-item p,
+.care-card p,
+.assist-option-copy span,
+.assist-response p {
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .editorial-section {
@@ -865,7 +935,8 @@ textarea {
   backdrop-filter: blur(18px);
 }
 
-.floating-actions a {
+.floating-actions a,
+.floating-actions button {
   min-height: 44px;
   padding: 0 18px;
   display: inline-flex;
@@ -874,9 +945,116 @@ textarea {
   border-radius: 999px;
 }
 
+.floating-actions button {
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.floating-actions button:first-child,
 .floating-actions a:first-child {
   color: #fff;
   background: var(--olive-deep);
+}
+
+.assist-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+}
+
+.assist-overlay {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(17, 24, 22, 0.28);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.assist-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  width: min(520px, calc(100vw - 24px));
+  padding: 28px;
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  transform: translateX(calc(100% + 24px));
+  transition: transform 260ms ease;
+}
+
+.assist-drawer.is-open {
+  pointer-events: auto;
+}
+
+.assist-overlay.is-open {
+  opacity: 1;
+}
+
+.assist-panel.is-open {
+  transform: translateX(0);
+}
+
+.assist-close {
+  width: 42px;
+  height: 42px;
+  margin-left: auto;
+  border-radius: 50%;
+  border: 1px solid rgba(30, 39, 35, 0.08);
+  background: rgba(255, 250, 244, 0.72);
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.assist-options {
+  display: grid;
+  gap: 12px;
+}
+
+.assist-option {
+  padding: 16px;
+  border-radius: 24px;
+  border: 1px solid rgba(30, 39, 35, 0.08);
+  background: rgba(255, 250, 244, 0.58);
+  display: flex;
+  gap: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.assist-option:hover,
+.assist-option.is-active {
+  border-color: rgba(67, 86, 79, 0.24);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(55, 43, 31, 0.08);
+}
+
+.assist-option-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.assist-option-copy strong {
+  font-size: 1rem;
+}
+
+.assist-response {
+  padding: 22px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255, 250, 244, 0.8), rgba(244, 235, 225, 0.92));
+  border: 1px solid rgba(30, 39, 35, 0.08);
+}
+
+.assist-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .reveal {
@@ -916,6 +1094,9 @@ textarea {
   .js .reveal,
   .site-nav,
   .faq-answer,
+  .assist-overlay,
+  .assist-panel,
+  .assist-option,
   .contact-form input,
   .contact-form select,
   .contact-form textarea {
@@ -928,6 +1109,7 @@ textarea {
   .difference-grid,
   .contact-grid,
   .service-grid,
+  .care-grid,
   .process-grid,
   .utility-grid,
   .testimonial-grid,
@@ -938,7 +1120,8 @@ textarea {
   }
 
   .visual-row,
-  .stage-stack {
+  .stage-stack,
+  .ritual-panel {
     grid-template-columns: 1fr;
   }
 
@@ -981,6 +1164,10 @@ textarea {
     transition: opacity 180ms ease, transform 180ms ease;
   }
 
+  .nav-cta-button {
+    justify-content: center;
+  }
+
   .site-nav.is-open {
     opacity: 1;
     pointer-events: auto;
@@ -1016,6 +1203,16 @@ textarea {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .assist-panel {
+    top: auto;
+    right: 14px;
+    left: 14px;
+    bottom: 14px;
+    width: auto;
+    max-height: min(82vh, 760px);
+    overflow-y: auto;
+  }
 }
 
 @media (max-width: 560px) {
@@ -1029,6 +1226,7 @@ textarea {
 
   .stage-main,
   .service-card,
+  .care-card,
   .process-card,
   .utility-card,
   .testimonial-card,
@@ -1044,6 +1242,7 @@ textarea {
 
   .stage-main,
   .service-card,
+  .care-card,
   .process-card,
   .utility-card,
   .testimonial-card,
@@ -1069,7 +1268,8 @@ textarea {
   }
 
   .hero-tag,
-  .button {
+  .button,
+  .assist-actions a {
     width: 100%;
   }
 
@@ -1078,7 +1278,13 @@ textarea {
     right: 14px;
   }
 
-  .floating-actions a {
+  .floating-actions a,
+  .floating-actions button {
     flex: 1;
+  }
+
+  .ritual-panel,
+  .assist-panel {
+    padding: 24px;
   }
 }

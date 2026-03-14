@@ -98,6 +98,35 @@ export default function Icon({ name }) {
           <path d="M18.5 15.5 19 17l1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5.5-1.5Z" />
         </svg>
       );
+    case "paw":
+      return (
+        <svg {...common}>
+          <circle cx="8" cy="8" r="1.6" />
+          <circle cx="16" cy="8" r="1.6" />
+          <circle cx="6.5" cy="12" r="1.5" />
+          <circle cx="17.5" cy="12" r="1.5" />
+          <path d="M12 12.5c-2.4 0-4.5 1.8-4.5 4 0 1.2.9 2 2.1 2 .9 0 1.5-.4 2.4-1 .8.6 1.5 1 2.4 1 1.2 0 2.1-.8 2.1-2 0-2.2-2.1-4-4.5-4Z" />
+        </svg>
+      );
+    case "moon":
+      return (
+        <svg {...common}>
+          <path d="M15.5 4.5a7.7 7.7 0 1 0 4 13.9A8.5 8.5 0 1 1 15.5 4.5Z" />
+        </svg>
+      );
+    case "leaf":
+      return (
+        <svg {...common}>
+          <path d="M18 5c-6.1.3-10.2 4.4-10.5 10.5 3.7 1.2 8.5-.2 10.8-3.6C20 9.3 20 6.8 18 5Z" />
+          <path d="M7 17c1.5-2.1 3.5-4 6-5.5" />
+        </svg>
+      );
+    case "drop":
+      return (
+        <svg {...common}>
+          <path d="M12 3.5c2.7 3.2 5 6 5 9a5 5 0 1 1-10 0c0-3 2.3-5.8 5-9Z" />
+        </svg>
+      );
     default:
       return null;
   }

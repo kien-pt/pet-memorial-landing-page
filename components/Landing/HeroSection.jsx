@@ -1,7 +1,7 @@
 import Icon from "./Icon";
 import { HeroHighlights } from "./LandingData";
 
-export default function HeroSection() {
+export default function HeroSection({ onQuickAssist }) {
   return (
     <section className="hero section">
       <div className="container hero-grid">
@@ -17,11 +17,11 @@ export default function HeroSection() {
           </p>
 
           <div className="hero-actions">
-            <a className="button button-primary" href="#contact">
-              Yêu cầu tư vấn
-            </a>
+            <button className="button button-primary" type="button" onClick={() => onQuickAssist?.("urgent")}>
+              Tư vấn nhanh 30 giây
+            </button>
             <a className="button button-secondary" href="#services">
-              Xem cấu trúc mới
+              Xem nhóm dịch vụ
             </a>
           </div>
 
@@ -54,17 +54,17 @@ export default function HeroSection() {
               </span>
               <div>
                 <strong>Nghi thức riêng tư</strong>
-                <p>Một không gian lắng lại để gia đình chào tạm biệt theo cách riêng của mình.</p>
+                <p>Một không gian lắng lại để gia đình chào tạm biệt theo cách riêng, có thể thêm lời nguyện ngắn.</p>
               </div>
             </article>
 
             <article className="mini-panel">
               <span className="mini-icon">
-                <Icon name="keepsake" />
+                <Icon name="frame" />
               </span>
               <div>
-                <strong>Kỷ vật lưu niệm</strong>
-                <p>Các vật phẩm được giới thiệu như những ký ức có thể nâng niu lâu dài.</p>
+                <strong>Bức tường tưởng niệm</strong>
+                <p>Khu tưởng niệm được định hướng để lưu ảnh, lời nhắn và keepsake theo từng bé.</p>
               </div>
             </article>
           </div>
