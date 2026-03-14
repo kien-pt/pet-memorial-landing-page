@@ -25,6 +25,9 @@ export default function QuickAssistDrawer({ isOpen, selectedOption, onSelect, on
 
         <p className="eyebrow">Tư vấn nhanh 30 giây</p>
         <h2 id="assist-title">Chọn điều gia đình cần nhất lúc này để chúng tôi gợi ý bước tiếp theo phù hợp.</h2>
+        <p className="assist-ai-note">
+          AI sẽ cố gắng trả lời các câu hỏi nhạy cảm (ví dụ chi phí hỏa táng mèo 5kg) ngay trong drawer trước khi bạn để lại thông tin.
+        </p>
 
         <div className="assist-options">
           {QuickAssistOptions.map((option) => (

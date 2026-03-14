@@ -13,7 +13,7 @@ export default function ContactSection({ feedback, onSubmit }) {
           <div className="contact-cards">
             <article>
               <span>Hotline</span>
-              <strong>0900 000 000</strong>
+              <strong>028 6287 5666</strong>
             </article>
             <article>
               <span>Email</span>
@@ -21,7 +21,7 @@ export default function ContactSection({ feedback, onSubmit }) {
             </article>
             <article>
               <span>Hỗ trợ thêm</span>
-              <strong>Zalo / Tư vấn nhanh</strong>
+              <strong>Zalo @annhienpet</strong>
             </article>
           </div>
         </div>

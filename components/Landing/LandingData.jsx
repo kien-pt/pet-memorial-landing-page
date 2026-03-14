@@ -150,6 +150,12 @@ export const QuickAssistOptions = [
     text: "Dành cho gia đình muốn một lời chào cuối trang nghiêm và ấm áp."
   },
   {
+    id: "cost",
+    icon: "tag",
+    title: "Chi phí hỏa táng",
+    text: "Đặt câu hỏi cụ thể (ví dụ: mèo 5kg) để AI gợi ý mức giá tham khảo ngay trong drawer."
+  },
+  {
     id: "keepsake",
     icon: "keepsake",
     title: "Muốn chọn kỷ vật",
@@ -168,9 +174,25 @@ export const QuickAssistReplies = {
     title: "Chúng tôi sẽ giúp gia đình chọn một nghi thức vừa đủ và phù hợp.",
     text: "Bạn chỉ cần cho biết mong muốn về lễ tiễn biệt, lời nguyện hoặc thủy táng để được tư vấn phương án nhẹ nhàng nhất."
   },
+  cost: {
+    label: "Chi phí gợi ý",
+    title: "AI có thể chia sẻ mức giá tham khảo cho từng lượt hỏi cụ thể.",
+    text: "Hãy cho biết trọng lượng thú cưng và loại dịch vụ (ví dụ: hỏa táng mèo 5kg), hệ thống sẽ đưa ra con số tham khảo cùng các bước tiếp theo."
+  },
   keepsake: {
     label: "Kỷ vật lưu giữ",
     title: "Những điều còn ở lại xứng đáng được lưu giữ thật đẹp.",
     text: "Bạn có thể bắt đầu từ nhu cầu về hũ tro cốt nghệ thuật, dấu chân lưu niệm hoặc trang tưởng niệm trực tuyến."
   }
 };
+
+export const Testimonials = [
+  {
+    quote: "Đội ngũ nhẹ nhàng từng bước, mình cảm thấy được chăm sóc như người thân.",
+    author: "Linh - Chủ nuôi chó Samoyed"
+  },
+  {
+    quote: "Cảm giác yên tâm khi thấy cả quy trình rõ ràng và câu trả lời cho chi phí trong drawer.",
+    author: "An - Pet owner"
+  }
+];

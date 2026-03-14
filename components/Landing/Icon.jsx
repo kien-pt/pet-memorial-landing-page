@@ -127,6 +127,13 @@ export default function Icon({ name }) {
           <path d="M12 3.5c2.7 3.2 5 6 5 9a5 5 0 1 1-10 0c0-3 2.3-5.8 5-9Z" />
         </svg>
       );
+    case "tag":
+      return (
+        <svg {...common}>
+          <path d="M5 12 12 5 19 12 12 19 5 12Z" />
+          <circle cx="12" cy="12" r="2" />
+        </svg>
+      );
     default:
       return null;
   }

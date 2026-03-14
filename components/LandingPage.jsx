@@ -10,6 +10,7 @@ import QuickAssistDrawer from "./Landing/QuickAssistDrawer";
 import ServicesSection from "./Landing/ServicesSection";
 import SiteFooter from "./Landing/SiteFooter";
 import SiteHeader from "./Landing/SiteHeader";
+import TestimonialSection from "./Landing/TestimonialSection";
 import TrustBand from "./Landing/TrustBand";
 
 export default function LandingPage() {
@@ -93,6 +94,7 @@ export default function LandingPage() {
         <TrustBand />
         <ServicesSection />
         <ProcessSection />
+        <TestimonialSection />
         <MemorialSection />
         <FaqSection openFaq={openFaq} setOpenFaq={setOpenFaq} />
         <ContactSection feedback={feedback} onSubmit={handleSubmit} />
