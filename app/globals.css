@@ -486,6 +486,40 @@ textarea {
   padding: 28px;
 }
 
+.editorial-section {
+  padding-top: 24px;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.editorial-card {
+  overflow: hidden;
+}
+
+.editorial-media {
+  position: relative;
+  min-height: 280px;
+  background: linear-gradient(145deg, rgba(48, 65, 60, 0.08), rgba(183, 154, 124, 0.12));
+}
+
+.editorial-media img {
+  object-fit: cover;
+}
+
+.editorial-body {
+  padding: 24px;
+}
+
+.editorial-body h3 {
+  margin: 0 0 10px;
+  font-size: 1.28rem;
+  line-height: 1.3;
+}
+
 .difference-grid {
   align-items: stretch;
 }
@@ -881,6 +915,7 @@ textarea {
   .utility-grid,
   .testimonial-grid,
   .memorial-grid,
+  .editorial-grid,
   .trust-grid {
     grid-template-columns: 1fr;
   }
