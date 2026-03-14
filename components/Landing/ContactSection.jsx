@@ -4,24 +4,24 @@ export default function ContactSection({ feedback, onSubmit }) {
       <div className="container contact-grid">
         <div className="contact-panel reveal">
           <p className="eyebrow">Liên hệ và hỗ trợ</p>
-          <h2>Chỉ cần để lại thông tin, đội ngũ sẽ nhanh chóng đồng hành cùng bạn.</h2>
+          <h2>Chỉ cần để lại thông tin, đội ngũ sẽ sớm liên hệ để đồng hành cùng gia đình.</h2>
           <p>
-            Nếu bạn cần được hướng dẫn ngay, hãy để lại số điện thoại hoặc liên hệ trực tiếp qua hotline.
-            Form này cũng đã sẵn sàng để nối sang email, CRM hoặc webhook khi triển khai thật.
+            Nếu bạn cần được hướng dẫn ngay, hãy gọi hotline hoặc để lại số điện thoại.
+            Chúng tôi sẽ giúp bạn xác định phương án phù hợp một cách nhẹ nhàng và rõ ràng.
           </p>
 
           <div className="contact-cards">
             <article>
-              <span>Hotline mẫu</span>
+              <span>Hotline</span>
               <strong>0900 000 000</strong>
             </article>
             <article>
-              <span>Email mẫu</span>
+              <span>Email</span>
               <strong>hello@annhien.vn</strong>
             </article>
             <article>
-              <span>Kênh tiếp theo</span>
-              <strong>Zalo / Chatbot / Webhook</strong>
+              <span>Hỗ trợ thêm</span>
+              <strong>Zalo / Tư vấn nhanh</strong>
             </article>
           </div>
         </div>
@@ -41,10 +41,9 @@ export default function ContactSection({ feedback, onSubmit }) {
             Nhu cầu chính
             <select name="service" defaultValue="Tư vấn tổng quan">
               <option value="Tư vấn tổng quan">Tư vấn tổng quan</option>
-              <option value="Theo loại thú cưng">Tư vấn theo loại thú cưng</option>
-              <option value="Nghi thức cầu siêu hoặc thủy táng">Nghi thức cầu siêu hoặc thủy táng</option>
+              <option value="Chuẩn bị nghi thức tiễn biệt">Chuẩn bị nghi thức tiễn biệt</option>
               <option value="Hỏa táng riêng">Hỏa táng riêng</option>
-              <option value="Tưởng niệm và keepsake">Tưởng niệm và keepsake</option>
+              <option value="Kỷ vật lưu giữ ký ức">Kỷ vật lưu giữ ký ức</option>
               <option value="Cần hỗ trợ gấp">Cần hỗ trợ gấp</option>
             </select>
           </label>

@@ -479,10 +479,15 @@ textarea {
 .service-grid,
 .care-grid,
 .process-grid,
-.utility-grid,
-.testimonial-grid {
+.utility-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -776,11 +781,21 @@ textarea {
 }
 
 .testimonial-section {
-  padding-top: 0;
+  padding-top: 72px;
+}
+
+.testimonial-head {
+  max-width: 860px;
 }
 
 .testimonial-card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: linear-gradient(180deg, rgba(255, 250, 244, 0.72), rgba(248, 239, 231, 0.9));
+  border-color: rgba(183, 154, 124, 0.22);
+  box-shadow: 0 24px 56px rgba(55, 43, 31, 0.12);
 }
 
 .testimonial-card span {
@@ -1191,6 +1206,10 @@ textarea {
 
   .site-footer {
     padding-bottom: 150px;
+  }
+
+  .testimonial-section {
+    padding-top: 64px;
   }
 
   .editorial-media,

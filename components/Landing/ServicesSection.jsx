@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Icon from "./Icon";
 import { Services } from "./LandingData";
@@ -31,7 +32,7 @@ export default function ServicesSection() {
       <div className="container">
         <SectionHeader
           eyebrow="Dịch vụ chính"
-          title="Những lựa chọn gia đình thường cần thấy rõ ngay từ đầu."
+          title="Ba lựa chọn cốt lõi được trình bày ngắn gọn để gia đình hiểu nhanh và yên tâm hơn."
         />
 
         <div className="service-grid">
@@ -47,11 +48,19 @@ export default function ServicesSection() {
               aria-haspopup="dialog"
               aria-expanded={activeService?.title === service.title}
             >
+              <div className={styles.serviceCardVisual}>
+                <Image
+                  src={service.image}
+                  alt={service.imageAlt}
+                  fill
+                  sizes="(max-width: 1120px) 100vw, 33vw"
+                />
+              </div>
               <div className={styles.serviceCardCopy}>
                 <div className="service-icon">
                   <Icon name={service.icon} />
                 </div>
-                <p className="card-label">{service.meta}</p>
+                <p className="card-label">{service.label}</p>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
               </div>
@@ -83,12 +92,20 @@ export default function ServicesSection() {
               ×
             </button>
 
+            <div className={styles.serviceModalVisual}>
+              <Image
+                src={activeService.image}
+                alt={activeService.imageAlt}
+                fill
+                sizes="(max-width: 640px) 100vw, 560px"
+              />
+            </div>
             <div className={styles.serviceModalIcon}>
               <Icon name={activeService.icon} />
             </div>
-            <p className="card-label">{activeService.meta}</p>
+            <p className="card-label">{activeService.label}</p>
             <h3 id="service-modal-title">{activeService.title}</h3>
-            <p>{activeService.text}</p>
+            <p>{activeService.details}</p>
           </div>
         </div>
       ) : null}

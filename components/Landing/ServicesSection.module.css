@@ -8,10 +8,23 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 18px;
+  overflow: hidden;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
     border-color 180ms ease;
+}
+
+.serviceCardVisual {
+  position: relative;
+  width: calc(100% + 56px);
+  margin: -28px -28px 4px;
+  min-height: 220px;
+  overflow: hidden;
+}
+
+.serviceCardVisual :global(img) {
+  object-fit: cover;
 }
 
 .serviceCardButton:hover,
@@ -61,6 +74,19 @@
   background: linear-gradient(180deg, rgba(255, 250, 244, 0.96), rgba(248, 239, 231, 0.98));
 }
 
+.serviceModalVisual {
+  position: relative;
+  width: calc(100% + 64px);
+  margin: -32px -32px 24px;
+  min-height: 220px;
+  overflow: hidden;
+  border-radius: 34px 34px 0 0;
+}
+
+.serviceModalVisual :global(img) {
+  object-fit: cover;
+}
+
 .serviceModal h3 {
   margin: 0 0 14px;
   font-size: clamp(1.8rem, 5vw, 2.4rem);
@@ -98,4 +124,19 @@
   font-size: 1.8rem;
   line-height: 1;
   cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .serviceCardVisual {
+    width: calc(100% + 48px);
+    margin: -24px -24px 2px;
+    min-height: 200px;
+  }
+
+  .serviceModalVisual {
+    width: calc(100% + 48px);
+    margin: -24px -24px 20px;
+    min-height: 190px;
+    border-radius: 28px 28px 0 0;
+  }
 }

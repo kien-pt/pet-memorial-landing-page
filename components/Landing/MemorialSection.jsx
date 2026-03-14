@@ -8,7 +8,7 @@ export default function MemorialSection() {
       <div className="container">
         <SectionHeader
           eyebrow="Tưởng niệm và lưu giữ"
-          title="Những điều ở lại sau cùng thường cần được thể hiện bằng sự tinh tế."
+          title="Những điều còn ở lại xứng đáng được lưu giữ bằng sự tinh tế và trân trọng."
         />
 
         <div className="memorial-grid">

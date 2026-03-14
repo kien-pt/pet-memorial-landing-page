@@ -1,10 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import CareOptionsSection from "./Landing/CareOptionsSection";
 import ContactSection from "./Landing/ContactSection";
-import DifferenceSection from "./Landing/DifferenceSection";
-import EditorialSection from "./Landing/EditorialSection";
 import FaqSection from "./Landing/FaqSection";
 import HeroSection from "./Landing/HeroSection";
 import MemorialSection from "./Landing/MemorialSection";
@@ -13,9 +10,7 @@ import QuickAssistDrawer from "./Landing/QuickAssistDrawer";
 import ServicesSection from "./Landing/ServicesSection";
 import SiteFooter from "./Landing/SiteFooter";
 import SiteHeader from "./Landing/SiteHeader";
-import TestimonialSection from "./Landing/TestimonialSection";
 import TrustBand from "./Landing/TrustBand";
-import UtilitySection from "./Landing/UtilitySection";
 
 export default function LandingPage() {
   const [navOpen, setNavOpen] = useState(false);
@@ -79,7 +74,7 @@ export default function LandingPage() {
       return;
     }
 
-    setFeedback("Đã ghi nhận yêu cầu demo. Bước tiếp theo có thể nối trực tiếp tới email, CRM hoặc webhook.");
+    setFeedback("Đã ghi nhận thông tin. Đội ngũ sẽ sớm liên hệ để đồng hành cùng gia đình.");
     event.currentTarget.reset();
   }
 
@@ -97,13 +92,8 @@ export default function LandingPage() {
         <HeroSection onQuickAssist={openAssist} />
         <TrustBand />
         <ServicesSection />
-        <CareOptionsSection />
-        <EditorialSection />
-        <DifferenceSection />
         <ProcessSection />
         <MemorialSection />
-        <UtilitySection />
-        <TestimonialSection />
         <FaqSection openFaq={openFaq} setOpenFaq={setOpenFaq} />
         <ContactSection feedback={feedback} onSubmit={handleSubmit} />
       </main>

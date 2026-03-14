@@ -8,12 +8,12 @@ export default function HeroSection({ onQuickAssist }) {
         <div className="hero-copy reveal">
           <p className="eyebrow">Đồng hành nhẹ nhàng trong khoảnh khắc khó nói lời chào</p>
           <h1>
-            Một lời tiễn biệt
-            <span>dịu dàng và trọn vẹn.</span>
+            Tiễn biệt bé yêu
+            <span>trang nghiêm và dịu dàng.</span>
           </h1>
           <p className="hero-text">
-            Từ khâu tiếp nhận, nghi thức tiễn biệt đến những kỷ vật lưu niệm, mọi trải nghiệm
-            được sắp xếp để gia đình cảm thấy an tâm và được nâng niu hơn.
+            Chúng tôi giúp gia đình đi qua thời khắc khó khăn này bằng sự riêng tư, trân trọng
+            và những lựa chọn đủ rõ ràng để bạn không phải bối rối thêm.
           </p>
 
           <div className="hero-actions">
@@ -37,8 +37,8 @@ export default function HeroSection({ onQuickAssist }) {
         <div className="hero-stage reveal delay-1">
           <div className="stage-frame stage-main">
             <div className="stage-copy">
-              <p className="card-label">Không gian tưởng niệm</p>
-              <h2>Calm, private, and respectful</h2>
+              <p className="card-label">Không gian tiễn biệt</p>
+              <h2>Yên tĩnh, kín đáo và đầy tôn trọng</h2>
             </div>
             <div className="stage-orbs">
               <span></span>
@@ -64,7 +64,7 @@ export default function HeroSection({ onQuickAssist }) {
               </span>
               <div>
                 <strong>Bức tường tưởng niệm</strong>
-                <p>Khu tưởng niệm được định hướng để lưu ảnh, lời nhắn và keepsake theo từng bé.</p>
+                <p>Một nơi lưu lại hình ảnh, lời nhắn và những kỷ vật gắn với ký ức về bé.</p>
               </div>
             </article>
           </div>

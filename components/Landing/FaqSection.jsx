@@ -6,8 +6,8 @@ export default function FaqSection({ openFaq, setOpenFaq }) {
     <section className="section">
       <div className="container">
         <SectionHeader
-          eyebrow="FAQ ngắn"
-          title="Một vài câu trả lời ngắn để người xem biết mình đang ở đúng nơi cần tìm."
+          eyebrow="Câu hỏi thường gặp"
+          title="Một vài điều gia đình thường muốn biết ngay trước khi liên hệ."
         />
 
         <div className="faq-list">

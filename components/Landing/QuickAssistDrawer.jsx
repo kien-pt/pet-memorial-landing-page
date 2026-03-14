@@ -24,7 +24,7 @@ export default function QuickAssistDrawer({ isOpen, selectedOption, onSelect, on
         </button>
 
         <p className="eyebrow">Tư vấn nhanh 30 giây</p>
-        <h2 id="assist-title">Chọn điều bạn cần ngay lúc này để website đưa bạn đến bước tiếp theo phù hợp.</h2>
+        <h2 id="assist-title">Chọn điều gia đình cần nhất lúc này để chúng tôi gợi ý bước tiếp theo phù hợp.</h2>
 
         <div className="assist-options">
           {QuickAssistOptions.map((option) => (
@@ -46,11 +46,11 @@ export default function QuickAssistDrawer({ isOpen, selectedOption, onSelect, on
         </div>
 
         <div className="assist-response">
-          <p className="card-label">{reply?.label || "Gợi ý điều hướng"}</p>
-          <h3>{reply?.title || "Hãy chọn một nhu cầu để nhận gợi ý hành động phù hợp."}</h3>
+          <p className="card-label">{reply?.label || "Gợi ý nhanh"}</p>
+          <h3>{reply?.title || "Hãy chọn một nhu cầu để nhận gợi ý hỗ trợ phù hợp."}</h3>
           <p>
             {reply?.text ||
-              "Sau khi chọn, bạn vẫn có thể tiếp tục sang form liên hệ hoặc hotline mà không cần đọc quá nhiều nội dung."}
+              "Sau khi chọn, bạn có thể để lại thông tin hoặc gọi trực tiếp để đội ngũ hỗ trợ ngay."}
           </p>
         </div>
 
