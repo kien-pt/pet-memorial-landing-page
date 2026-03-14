@@ -15,10 +15,19 @@ export default function EditorialSection() {
           {EditorialPanels.map((panel, index) => (
             <article
               key={panel.title}
-              className={`editorial-card card-surface reveal delay-${Math.min(index + 1, 3)}`}
+              className={`editorial-card editorial-card-${index + 1} card-surface reveal delay-${Math.min(
+                index + 1,
+                3
+              )}`}
             >
               <div className="editorial-media">
-                <Image src={panel.image} alt={panel.title} fill sizes="(max-width: 1120px) 100vw, 50vw" />
+                <Image
+                  src={panel.image}
+                  alt={panel.title}
+                  fill
+                  sizes="(max-width: 1120px) 100vw, 50vw"
+                  priority={index === 0}
+                />
               </div>
               <div className="editorial-body">
                 <p className="card-label">{panel.label}</p>

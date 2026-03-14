@@ -184,7 +184,7 @@ textarea {
 
 .hero {
   padding-top: 84px;
-  padding-bottom: 72px;
+  padding-bottom: 56px;
 }
 
 .hero-grid,
@@ -209,7 +209,7 @@ textarea {
 
 .hero-copy h1 {
   font-size: clamp(4rem, 10vw, 7rem);
-  max-width: 8.5ch;
+  max-width: 7.8ch;
 }
 
 .hero-copy h1 span {
@@ -245,7 +245,7 @@ textarea {
 }
 
 .hero-text {
-  max-width: 52ch;
+  max-width: 48ch;
   margin-top: 24px;
   font-size: 1.02rem;
 }
@@ -331,8 +331,8 @@ textarea {
 
 .stage-main {
   position: relative;
-  min-height: 420px;
-  padding: 30px;
+  min-height: 500px;
+  padding: 34px;
   overflow: hidden;
   background:
     radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.66), transparent 24%),
@@ -426,7 +426,7 @@ textarea {
 }
 
 .trust-band {
-  padding-bottom: 24px;
+  padding-bottom: 40px;
 }
 
 .trust-grid {
@@ -460,7 +460,7 @@ textarea {
 .section-head,
 .utility-copy {
   max-width: 760px;
-  margin-bottom: 34px;
+  margin-bottom: 42px;
 }
 
 .section-head h2,
@@ -487,7 +487,7 @@ textarea {
 }
 
 .editorial-section {
-  padding-top: 24px;
+  padding-top: 8px;
 }
 
 .editorial-grid {
@@ -498,26 +498,42 @@ textarea {
 
 .editorial-card {
   overflow: hidden;
+  display: grid;
+  grid-template-rows: minmax(320px, 1fr) auto;
 }
 
 .editorial-media {
   position: relative;
-  min-height: 280px;
+  min-height: 360px;
   background: linear-gradient(145deg, rgba(48, 65, 60, 0.08), rgba(183, 154, 124, 0.12));
 }
 
 .editorial-media img {
   object-fit: cover;
+  transform: scale(1.01);
 }
 
 .editorial-body {
-  padding: 24px;
+  padding: 26px 26px 28px;
 }
 
 .editorial-body h3 {
   margin: 0 0 10px;
   font-size: 1.28rem;
   line-height: 1.3;
+}
+
+.editorial-card-1 .editorial-media,
+.editorial-card-4 .editorial-media {
+  min-height: 420px;
+}
+
+.editorial-card-2 .editorial-media img {
+  object-position: center 42%;
+}
+
+.editorial-card-3 .editorial-media img {
+  object-position: center 35%;
 }
 
 .difference-grid {
@@ -534,11 +550,11 @@ textarea {
 }
 
 .visual-card-large {
-  min-height: 440px;
+  min-height: 500px;
 }
 
 .visual-top {
-  height: 280px;
+  height: 320px;
 }
 
 .tone-olive {
@@ -637,7 +653,7 @@ textarea {
 }
 
 .memorial-visual {
-  min-height: 240px;
+  min-height: 280px;
   padding: 24px;
   display: flex;
   justify-content: flex-end;
@@ -690,7 +706,7 @@ textarea {
 }
 
 .testimonial-section {
-  padding-top: 12px;
+  padding-top: 0;
 }
 
 .testimonial-card {
@@ -758,6 +774,7 @@ textarea {
 }
 
 .contact-section {
+  padding-top: 92px;
   padding-bottom: 120px;
 }
 
@@ -821,7 +838,7 @@ textarea {
 }
 
 .site-footer {
-  padding: 24px 0 120px;
+  padding: 10px 0 120px;
 }
 
 .footer-wrap {
@@ -928,6 +945,12 @@ textarea {
   .hero-copy h1 {
     max-width: 9ch;
   }
+
+  .editorial-card,
+  .editorial-card-1,
+  .editorial-card-4 {
+    grid-template-rows: minmax(300px, 1fr) auto;
+  }
 }
 
 @media (max-width: 780px) {
@@ -937,6 +960,7 @@ textarea {
 
   .hero {
     padding-top: 52px;
+    padding-bottom: 34px;
   }
 
   .site-nav {
@@ -980,6 +1004,12 @@ textarea {
 
   .site-footer {
     padding-bottom: 150px;
+  }
+
+  .editorial-media,
+  .editorial-card-1 .editorial-media,
+  .editorial-card-4 .editorial-media {
+    min-height: 300px;
   }
 
   .footer-wrap {
@@ -1027,6 +1057,15 @@ textarea {
   .hero-tags {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .section-head,
+  .utility-copy {
+    margin-bottom: 30px;
+  }
+
+  .editorial-body {
+    padding: 22px 22px 24px;
   }
 
   .hero-tag,

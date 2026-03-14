@@ -137,25 +137,29 @@ export const UtilityCards = [
 
 export const EditorialPanels = [
   {
-    image: "/images/farewell-ceremony.svg",
+    image:
+      "https://images.pexels.com/photos/33083323/pexels-photo-33083323.jpeg?auto=compress&cs=tinysrgb&w=1200",
     label: "Farewell space",
     title: "Không gian tiễn biệt riêng tư và trang nhã",
     text: "Một hình ảnh đẹp về không gian hỗ trợ sẽ giúp gia đình cảm nhận được sự chỉn chu ngay từ lần đầu ghé thăm."
   },
   {
-    image: "/images/private-cremation.svg",
+    image:
+      "https://images.unsplash.com/photo-1767137652252-f1bedded19c0?auto=format&fit=crop&w=1200&q=80",
     label: "Private cremation",
     title: "Dịch vụ rõ ràng, từng bước đều dễ hiểu",
     text: "Từ khâu tiếp nhận đến lúc trao lại tro cốt, mọi thông tin nên được trình bày gọn và dễ theo dõi."
   },
   {
-    image: "/images/keepsake-gallery.svg",
+    image:
+      "https://images.pexels.com/photos/8217492/pexels-photo-8217492.jpeg?auto=compress&cs=tinysrgb&w=1200",
     label: "Keepsake gallery",
     title: "Kỷ vật lưu niệm được giới thiệu như một bộ sưu tập",
     text: "Urns, khung ảnh tưởng niệm và keepsakes sẽ thuyết phục hơn khi được trưng bày bằng hình ảnh rõ ràng."
   },
   {
-    image: "/images/support-journey.svg",
+    image:
+      "https://images.pexels.com/photos/34336747/pexels-photo-34336747.jpeg?auto=compress&cs=tinysrgb&w=1200",
     label: "Support journey",
     title: "Hướng dẫn nhẹ nhàng cho những bước tiếp theo",
     text: "Khách hàng thường cần một chỉ dẫn ngắn gọn về việc nên làm gì ngay lúc này và sẽ được hỗ trợ ra sao."
