@@ -26,7 +26,7 @@ export default function FaqSection({ openFaq, setOpenFaq }) {
                   onClick={() => setOpenFaq(isOpen ? null : index)}
                 >
                   <span>{faq.question}</span>
-                  <span className="faq-plus">{isOpen ? "−" : "+"}</span>
+                  <span className="faq-plus">{isOpen ? "-" : "+"}</span>
                 </button>
                 <div className="faq-answer">
                   <p>{faq.answer}</p>

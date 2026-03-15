@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import BotpressChatWidget from "./BotpressChatWidget";
 import ContactSection from "./Landing/ContactSection";
 import FaqSection from "./Landing/FaqSection";
 import HeroSection from "./Landing/HeroSection";
@@ -101,6 +102,7 @@ export default function LandingPage() {
       </main>
 
       <SiteFooter onQuickAssist={openAssist} />
+      <BotpressChatWidget />
       <QuickAssistDrawer
         isOpen={assistOpen}
         selectedOption={assistSelection}

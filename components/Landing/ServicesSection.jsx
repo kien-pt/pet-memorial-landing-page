@@ -32,7 +32,7 @@ export default function ServicesSection() {
       <div className="container">
         <SectionHeader
           eyebrow="Dịch vụ chính"
-          title="Ba lựa chọn cốt lõi được trình bày ngắn gọn để gia đình hiểu nhanh và yên tâm hơn."
+          title="Gia đình có thể bắt đầu từ ba lựa chọn cốt lõi này để dễ hình dung hướng đi phù hợp."
         />
 
         <div className="service-grid">

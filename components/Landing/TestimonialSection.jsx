@@ -6,8 +6,8 @@ export default function TestimonialSection() {
     <section className="section section-soft testimonial-section">
       <div className="container">
         <SectionHeader
-          eyebrow="Cảm nhận & tinh thần"
-          title="Phần testimonial được đẩy lên rõ hơn để người xem không bỏ lỡ điểm chốt cảm xúc này."
+          eyebrow="Cảm nhận và tinh thần"
+          title="Những chia sẻ ngắn giúp người xem cảm nhận rõ hơn sự nhẹ nhàng và đáng tin của dịch vụ."
           className="section-head testimonial-head reveal"
         />
 

@@ -46,7 +46,7 @@ export const Services = [
     icon: "lotus",
     label: "Nghi thức tiễn biệt",
     title: "Một khoảng lặng đẹp để gia đình nói lời chào cuối cùng.",
-    text: "Không gian được chuẩn bị trang nhã với hoa, ánh sáng dịu và những nghi thức phù hợp niềm tin của từng gia đình.",
+    text: "Không gian được chuẩn bị trang nhã với hoa, ánh sáng dịu và nghi thức phù hợp niềm tin của từng gia đình.",
     details:
       "Gia đình có thể lựa chọn lời nguyện ngắn, lễ cầu siêu, thời khắc riêng để chào tạm biệt hoặc hình thức thủy táng nhẹ nhàng nếu mong muốn.",
     image:
@@ -153,7 +153,7 @@ export const QuickAssistOptions = [
     id: "cost",
     icon: "tag",
     title: "Chi phí hỏa táng",
-    text: "Đặt câu hỏi cụ thể (ví dụ: mèo 5kg) để AI gợi ý mức giá tham khảo ngay trong drawer."
+    text: "Chia sẻ nhu cầu cơ bản để nhận hướng dẫn và được tư vấn chi phí chi tiết theo thông tin thực tế."
   },
   {
     id: "keepsake",
@@ -176,8 +176,8 @@ export const QuickAssistReplies = {
   },
   cost: {
     label: "Chi phí gợi ý",
-    title: "AI có thể chia sẻ mức giá tham khảo cho từng lượt hỏi cụ thể.",
-    text: "Hãy cho biết trọng lượng thú cưng và loại dịch vụ (ví dụ: hỏa táng mèo 5kg), hệ thống sẽ đưa ra con số tham khảo cùng các bước tiếp theo."
+    title: "Chi phí cần được tư vấn theo nhu cầu thực tế để tránh báo nhầm.",
+    text: "Bạn có thể cho biết loại thú cưng, cân nặng ước tính và nhu cầu chính để nhận hướng dẫn phù hợp, sau đó đội ngũ sẽ tư vấn cụ thể hơn."
   },
   keepsake: {
     label: "Kỷ vật lưu giữ",
@@ -192,7 +192,113 @@ export const Testimonials = [
     author: "Linh - Chủ nuôi chó Samoyed"
   },
   {
-    quote: "Cảm giác yên tâm khi thấy cả quy trình rõ ràng và câu trả lời cho chi phí trong drawer.",
-    author: "An - Pet owner"
+    quote: "Cảm giác yên tâm khi thấy cả quy trình rõ ràng và có người giải thích chi phí rất dễ hiểu.",
+    author: "An - Chủ nuôi mèo"
+  }
+];
+
+export const UtilityCards = [
+  {
+    icon: "phone",
+    title: "Phản hồi nhanh",
+    text: "Thông tin liên hệ được đặt rõ ràng để gia đình không phải tìm kiếm quá lâu trong lúc cần gấp."
+  },
+  {
+    icon: "lotus",
+    title: "Lời văn dịu dàng",
+    text: "Nội dung ngắn, rõ và vừa đủ để người xem hiểu mà không bị choáng ngợp bởi quá nhiều mô tả."
+  },
+  {
+    icon: "star",
+    title: "Minh bạch từng bước",
+    text: "Từ tiếp nhận đến bàn giao đều có hướng dẫn cụ thể để gia đình luôn cảm thấy được đồng hành."
+  }
+];
+
+export const Reasons = [
+  {
+    icon: "heart",
+    title: "Giảm áp lực ra quyết định",
+    text: "Cách sắp xếp nội dung tốt giúp gia đình nhìn ra lựa chọn phù hợp ngay trong vài phút đầu."
+  },
+  {
+    icon: "route",
+    title: "Biết bước tiếp theo là gì",
+    text: "Một hành trình rõ ràng giúp người xem bớt lo lắng vì luôn biết điều gì sẽ diễn ra tiếp theo."
+  },
+  {
+    icon: "shield",
+    title: "Tăng cảm giác tin cậy",
+    text: "Thiết kế chỉn chu, câu chữ đúng mực và nhịp trang hợp lý tạo cảm giác an tâm hơn rất nhiều."
+  }
+];
+
+export const CareOptions = [
+  {
+    icon: "paw",
+    label: "Theo kích thước thú cưng",
+    title: "Phương án được gợi ý theo thể trạng của bé.",
+    text: "Mỗi nhóm kích thước sẽ phù hợp với thời gian tiếp nhận, kiểu hũ tro cốt và cách tổ chức nghi thức khác nhau."
+  },
+  {
+    icon: "flame",
+    label: "Theo nhu cầu gia đình",
+    title: "Có thể chọn hỏa táng riêng hoặc nghi thức tiễn biệt trước.",
+    text: "Các lựa chọn được chia rõ để gia đình hiểu nhanh đâu là dịch vụ chính và đâu là phần đi kèm."
+  },
+  {
+    icon: "keepsake",
+    label: "Theo hình thức lưu giữ",
+    title: "Kỷ vật và trang tưởng niệm có thể được chuẩn bị cùng hành trình.",
+    text: "Gia đình có thể cân nhắc từ sớm để việc lưu giữ ký ức được liền mạch và phù hợp hơn."
+  }
+];
+
+export const FarewellOptions = [
+  {
+    icon: "lotus",
+    title: "Lời nguyện ngắn",
+    text: "Phù hợp với gia đình muốn một khoảnh khắc khép lại nhẹ nhàng, kín đáo và đầy tình cảm."
+  },
+  {
+    icon: "frame",
+    title: "Bàn tưởng niệm nhỏ",
+    text: "Có thể chuẩn bị ảnh, hoa và vài món đồ thân thuộc để lời chào cuối cùng trở nên gần gũi hơn."
+  },
+  {
+    icon: "star",
+    title: "Thời khắc riêng tư",
+    text: "Gia đình có thể dành một khoảng lặng ngắn trước khi bàn giao để nói lời tạm biệt theo cách riêng."
+  }
+];
+
+export const EditorialPanels = [
+  {
+    label: "Không gian tiếp đón",
+    title: "Một trải nghiệm đủ ấm áp để gia đình cảm thấy được thấu hiểu ngay từ đầu.",
+    text: "Màu sắc, hình ảnh và nhịp nội dung cùng hướng đến cảm giác nhẹ nhàng, tinh tế và bớt nặng nề hơn.",
+    image:
+      "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    label: "Nghi thức vừa đủ",
+    title: "Không cần quá nhiều chi tiết, chỉ cần đúng điều gia đình đang cần.",
+    text: "Trang được chia khúc rõ ràng để người xem tìm thấy thông tin quan trọng mà không phải đọc quá dài.",
+    image:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    label: "Kỷ vật lưu giữ",
+    title: "Sự hiện diện của ký ức được kể lại bằng hình ảnh thay vì lời giải thích dài dòng.",
+    text: "Các card nội dung giúp dịch vụ trở nên gần gũi hơn, đồng thời giữ được cảm giác trang nhã cần có.",
+    image:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    label: "Kết nối nhanh",
+    title: "Khi cần hỗ trợ, chỉ một nút bấm là đủ để bắt đầu cuộc trò chuyện.",
+    text: "CTA, form liên hệ và chatbot được đặt đúng chỗ để gia đình không bị ngắt mạch khi đang tìm kiếm trợ giúp.",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
   }
 ];

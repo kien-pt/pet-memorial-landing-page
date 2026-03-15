@@ -1,19 +1,27 @@
+import { Cormorant_Garamond, Manrope } from "next/font/google";
+
 export const metadata = {
   title: "An Nhien Pet Memorial",
   description:
     "Landing page giao dien dep, hien dai va trang nha cho website dich vu tang le thu cung."
 };
 
+const manrope = Manrope({
+  subsets: ["latin", "vietnamese"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700", "800"]
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin", "vietnamese"],
+  variable: "--font-serif",
+  weight: ["500", "600", "700"]
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="vi">
+    <html lang="vi" className={`${manrope.variable} ${cormorantGaramond.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
-          rel="stylesheet"
-        />
         <script
           dangerouslySetInnerHTML={{
             __html: "document.documentElement.classList.add('js');"

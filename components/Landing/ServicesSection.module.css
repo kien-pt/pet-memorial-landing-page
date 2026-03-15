@@ -91,7 +91,7 @@
   margin: 0 0 14px;
   font-size: clamp(1.8rem, 5vw, 2.4rem);
   line-height: 1.05;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
 }
 
 .serviceModal p:last-child {

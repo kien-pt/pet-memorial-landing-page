@@ -26,7 +26,8 @@ export default function QuickAssistDrawer({ isOpen, selectedOption, onSelect, on
         <p className="eyebrow">Tư vấn nhanh 30 giây</p>
         <h2 id="assist-title">Chọn điều gia đình cần nhất lúc này để chúng tôi gợi ý bước tiếp theo phù hợp.</h2>
         <p className="assist-ai-note">
-          AI sẽ cố gắng trả lời các câu hỏi nhạy cảm (ví dụ chi phí hỏa táng mèo 5kg) ngay trong drawer trước khi bạn để lại thông tin.
+          Bạn có thể chọn nhu cầu để xem hướng dẫn nhanh, sau đó nhận tư vấn chi tiết qua chatbot hoặc để lại thông
+          tin để đội ngũ liên hệ.
         </p>
 
         <div className="assist-options">
@@ -51,10 +52,7 @@ export default function QuickAssistDrawer({ isOpen, selectedOption, onSelect, on
         <div className="assist-response">
           <p className="card-label">{reply?.label || "Gợi ý nhanh"}</p>
           <h3>{reply?.title || "Hãy chọn một nhu cầu để nhận gợi ý hỗ trợ phù hợp."}</h3>
-          <p>
-            {reply?.text ||
-              "Sau khi chọn, bạn có thể để lại thông tin hoặc gọi trực tiếp để đội ngũ hỗ trợ ngay."}
-          </p>
+          <p>{reply?.text || "Sau khi chọn, bạn có thể để lại thông tin hoặc gọi trực tiếp để đội ngũ hỗ trợ ngay."}</p>
         </div>
 
         <div className="assist-actions">

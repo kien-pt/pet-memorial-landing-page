@@ -9,8 +9,8 @@ export default function DifferenceSection() {
           <div className="visual-card visual-card-large">
             <div className="visual-top tone-olive"></div>
             <div className="visual-bottom">
-              <p className="card-label">Visual hierarchy</p>
-              <h3>Hero, trust strip, cards, process, memorial, contact</h3>
+              <p className="card-label">Nhịp trang rõ ràng</p>
+              <h3>Hero, niềm tin, dịch vụ, quy trình, tưởng niệm và liên hệ</h3>
             </div>
           </div>
 
@@ -19,7 +19,7 @@ export default function DifferenceSection() {
               <div className="visual-top tone-sand"></div>
             </div>
             <div className="visual-card visual-card-quote">
-              <p>“Không cần nhiều module. Cần một nhịp trang đẹp và có chủ đích.”</p>
+              <p>"Không cần nhiều module. Cần một nhịp trang đẹp và có chủ đích."</p>
             </div>
           </div>
         </div>

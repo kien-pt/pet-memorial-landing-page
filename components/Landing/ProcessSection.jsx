@@ -8,7 +8,7 @@ export default function ProcessSection() {
       <div className="container">
         <SectionHeader
           eyebrow="Quy trình 4 bước"
-          title="Một lộ trình ngắn gọn để gia đình biết điều gì sẽ diễn ra tiếp theo."
+          title="Gia đình sẽ biết rõ từng bước tiếp theo để mọi việc diễn ra nhẹ nhàng và dễ theo dõi hơn."
         />
 
         <div className="process-grid">
