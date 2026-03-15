@@ -1,62 +1,105 @@
 .section {
-  padding-top: 72px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .head {
-  max-width: 860px;
+  max-width: 800px;
+  margin-bottom: 60px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .card {
   min-height: 100%;
-  padding: 28px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background: linear-gradient(180deg, rgba(255, 250, 244, 0.72), rgba(248, 239, 231, 0.9));
-  border-color: rgba(183, 154, 124, 0.22);
-  box-shadow: 0 24px 56px rgba(55, 43, 31, 0.12);
+  background: var(--surface);
+  border: 1px solid rgba(183, 154, 124, 0.15);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.card p {
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: var(--hero-olive);
+  transition: height 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 64px rgba(55, 43, 31, 0.08);
+  border-color: rgba(183, 154, 124, 0.3);
+}
+
+.card:hover::before {
+  height: 100%;
+}
+
+.quoteIcon {
+  margin-bottom: 24px;
+  opacity: 0.6;
+}
+
+.quoteText {
   margin: 0;
   font-family: var(--font-serif), var(--font-serif-fallback);
-  font-size: 1.85rem;
-  line-height: 1.15;
+  font-size: 1.35rem;
+  line-height: 1.6;
   color: var(--ink);
+  font-style: italic;
+  flex-grow: 1;
 }
 
-.card span {
-  display: block;
-  margin-top: 18px;
+.author {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid rgba(183, 154, 124, 0.1);
+  padding-top: 24px;
+}
+
+.name {
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.detail {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 1120px) {
   .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 780px) {
   .section {
-    padding-top: 64px;
+    padding: 64px 0;
   }
 
   .grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
-}
 
-@media (max-width: 560px) {
   .card {
-    padding: 24px;
-    border-radius: 28px;
+    padding: 32px;
   }
 }

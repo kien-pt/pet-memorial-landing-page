@@ -185,12 +185,19 @@ export const QuickAssistReplies = {
 
 export const Testimonials = [
   {
-    quote: "Đội ngũ nhẹ nhàng từng bước, mình cảm thấy được chăm sóc như người thân.",
-    author: "Linh - Chủ nuôi chó Samoyed"
+    quote: "Trong khoảnh khắc bối rối nhất, sự điềm tĩnh và nhẹ nhàng của các bạn đã giúp mình thấy an lòng. Cảm ơn vì đã chăm sóc bé Mochi như một thành viên gia đình.",
+    author: "Chị Linh",
+    detail: "Gia đình bé Samoyed Mochi"
   },
   {
-    quote: "Cảm giác yên tâm khi thấy cả quy trình rõ ràng và có người giải thích chi phí rất dễ hiểu.",
-    author: "An - Chủ nuôi mèo"
+    quote: "Không gian tiễn biệt thật sự trang trọng và ấm áp. Mọi chi tiết nhỏ từ nến đến hoa đều được chuẩn bị bằng cả trái tim. Một lời chào cuối trọn vẹn cho người bạn nhỏ.",
+    author: "Anh An",
+    detail: "Gia đình bé Mèo Bơ"
+  },
+  {
+    quote: "Mình trân trọng nhất là sự minh bạch và tôn trọng tuyệt đối của đội ngũ. Không có sự hối thúc, chỉ có sự thấu hiểu và sẻ chia. Một nơi đáng tin cậy để gửi gắm tình thương.",
+    author: "Chị Vy",
+    detail: "Gia đình bé Poodle Lu"
   }
 ];
 
