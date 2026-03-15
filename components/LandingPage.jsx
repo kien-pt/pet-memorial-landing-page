@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useContactForm } from "../hooks/useContactForm";
+import { useReveal } from "../hooks/useReveal";
+import { useScrollLock } from "../hooks/useScrollLock";
 import BotpressChatWidget from "./BotpressChatWidget";
 import ContactSection from "./Landing/ContactSection";
-import FaqSection from "./Landing/FaqSection";
 import HeroSection from "./Landing/HeroSection";
 import MemorialSection from "./Landing/MemorialSection";
 import ProcessSection from "./Landing/ProcessSection";
@@ -16,69 +18,12 @@ import TrustBand from "./Landing/TrustBand";
 
 export default function LandingPage() {
   const [navOpen, setNavOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState(null);
   const [assistOpen, setAssistOpen] = useState(false);
   const [assistSelection, setAssistSelection] = useState(null);
-  const [feedback, setFeedback] = useState("");
+  const { feedback, handleSubmit } = useContactForm();
 
-  useEffect(() => {
-    const elements = document.querySelectorAll(".reveal");
-
-    if (!("IntersectionObserver" in window)) {
-      elements.forEach((element) => element.classList.add("is-visible"));
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.18 }
-    );
-
-    elements.forEach((element) => observer.observe(element));
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!assistOpen) return undefined;
-
-    const previousOverflow = document.body.style.overflow;
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        setAssistOpen(false);
-      }
-    };
-
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.body.style.overflow = previousOverflow;
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [assistOpen]);
-
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    const formData = new FormData(event.currentTarget);
-    const name = String(formData.get("name") || "").trim();
-    const phone = String(formData.get("phone") || "").trim();
-
-    if (!name || !phone) {
-      setFeedback("Vui lòng nhập họ tên và số điện thoại để tiếp tục.");
-      return;
-    }
-
-    setFeedback("Đã ghi nhận thông tin. Đội ngũ sẽ sớm liên hệ để đồng hành cùng gia đình.");
-    event.currentTarget.reset();
-  }
+  useReveal();
+  useScrollLock(assistOpen, () => setAssistOpen(false));
 
   function openAssist(option = null) {
     setAssistSelection(option);
@@ -87,28 +32,29 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="page-shell">
-      <SiteHeader navOpen={navOpen} setNavOpen={setNavOpen} onQuickAssist={openAssist} />
+    <>
+      <div className="page-shell">
+        <SiteHeader navOpen={navOpen} setNavOpen={setNavOpen} onQuickAssist={openAssist} />
 
-      <main id="top">
-        <HeroSection onQuickAssist={openAssist} />
-        <TrustBand />
-        <ServicesSection />
-        <ProcessSection />
-        <TestimonialSection />
-        <MemorialSection />
-        {/* <FaqSection openFaq={openFaq} setOpenFaq={setOpenFaq} /> */}
-        <ContactSection feedback={feedback} onSubmit={handleSubmit} />
-      </main>
+        <main id="top">
+          <HeroSection onQuickAssist={openAssist} />
+          <TrustBand />
+          <ServicesSection />
+          <ProcessSection />
+          <TestimonialSection />
+          <MemorialSection />
+          <ContactSection feedback={feedback} onSubmit={handleSubmit} />
+        </main>
 
-      <SiteFooter onQuickAssist={openAssist} />
+        <SiteFooter onQuickAssist={openAssist} />
+        <QuickAssistDrawer
+          isOpen={assistOpen}
+          selectedOption={assistSelection}
+          onSelect={setAssistSelection}
+          onClose={() => setAssistOpen(false)}
+        />
+      </div>
       <BotpressChatWidget />
-      <QuickAssistDrawer
-        isOpen={assistOpen}
-        selectedOption={assistSelection}
-        onSelect={setAssistSelection}
-        onClose={() => setAssistOpen(false)}
-      />
-    </div>
+    </>
   );
 }

@@ -1,5 +1,6 @@
-import { Faqs } from "./LandingData";
-import SectionHeader from "./SectionHeader";
+import { Faqs } from "../LandingData";
+import SectionHeader from "../SectionHeader";
+import styles from "./FaqSection.module.css";
 
 export default function FaqSection({ openFaq, setOpenFaq }) {
   return (
@@ -10,25 +11,25 @@ export default function FaqSection({ openFaq, setOpenFaq }) {
           title="Một vài điều gia đình thường muốn biết ngay trước khi liên hệ."
         />
 
-        <div className="faq-list">
+        <div className={styles.list}>
           {Faqs.map((faq, index) => {
             const isOpen = openFaq === index;
 
             return (
               <article
                 key={faq.question}
-                className={`faq-item card-surface reveal delay-${index + 1} ${isOpen ? "is-open" : ""}`.trim()}
+                className={`card-surface reveal delay-${index + 1} ${styles.item} ${isOpen ? styles.open : ""}`.trim()}
               >
                 <button
-                  className="faq-question"
+                  className={styles.question}
                   type="button"
                   aria-expanded={isOpen}
                   onClick={() => setOpenFaq(isOpen ? null : index)}
                 >
                   <span>{faq.question}</span>
-                  <span className="faq-plus">{isOpen ? "-" : "+"}</span>
+                  <span className={styles.plus}>{isOpen ? "-" : "+"}</span>
                 </button>
-                <div className="faq-answer">
+                <div className={styles.answer}>
                   <p>{faq.answer}</p>
                 </div>
               </article>

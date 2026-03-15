@@ -1,5 +1,5 @@
-import Icon from "./Icon";
-import { QuickAssistOptions, QuickAssistReplies } from "./LandingData";
+import Icon from "../Icon";
+import { QuickAssistOptions, QuickAssistReplies } from "../LandingData";
 
 export default function QuickAssistDrawer({ isOpen, selectedOption, onSelect, onClose }) {
   const reply = selectedOption ? QuickAssistReplies[selectedOption] : null;

@@ -1,5 +1,5 @@
-import { NavItems } from "./LandingData";
-import NavLink from "./NavLink";
+import { NavItems } from "../LandingData";
+import NavLink from "../NavLink";
 
 export default function SiteHeader({ navOpen, setNavOpen, onQuickAssist }) {
   function closeNav() {

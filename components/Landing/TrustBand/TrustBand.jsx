@@ -1,4 +1,4 @@
-import { TrustPoints } from "./LandingData";
+import { TrustPoints } from "../LandingData";
 
 export default function TrustBand() {
   return (

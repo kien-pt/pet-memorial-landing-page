@@ -1,5 +1,5 @@
-import Icon from "./Icon";
-import { Reasons } from "./LandingData";
+import Icon from "../Icon";
+import { Reasons } from "../LandingData";
 
 export default function DifferenceSection() {
   return (

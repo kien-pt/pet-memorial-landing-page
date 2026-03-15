@@ -1,5 +1,5 @@
-import Icon from "./Icon";
-import { UtilityCards } from "./LandingData";
+import Icon from "../Icon";
+import { UtilityCards } from "../LandingData";
 
 export default function UtilitySection() {
   return (

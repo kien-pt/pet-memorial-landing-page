@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { EditorialPanels } from "./LandingData";
-import SectionHeader from "./SectionHeader";
+import { EditorialPanels } from "../LandingData";
+import SectionHeader from "../SectionHeader";
 
 export default function EditorialSection() {
   return (

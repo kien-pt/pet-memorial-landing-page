@@ -1,6 +1,6 @@
-import Icon from "./Icon";
-import { CareOptions, FarewellOptions } from "./LandingData";
-import SectionHeader from "./SectionHeader";
+import Icon from "../Icon";
+import { CareOptions, FarewellOptions } from "../LandingData";
+import SectionHeader from "../SectionHeader";
 
 export default function CareOptionsSection() {
   return (

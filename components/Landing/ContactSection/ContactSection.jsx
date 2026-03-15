@@ -1,8 +1,10 @@
+import styles from "./ContactSection.module.css";
+
 export default function ContactSection({ feedback, onSubmit }) {
   return (
-    <section id="contact" className="section contact-section">
-      <div className="container contact-grid">
-        <div className="contact-panel reveal">
+    <section id="contact" className={`${styles.section} section`}>
+      <div className={`container ${styles.grid}`}>
+        <div className={`card-surface reveal ${styles.panel}`}>
           <p className="eyebrow">Liên hệ và hỗ trợ</p>
           <h2>Chỉ cần để lại thông tin, đội ngũ sẽ sớm liên hệ để đồng hành cùng gia đình.</h2>
           <p>
@@ -10,7 +12,7 @@ export default function ContactSection({ feedback, onSubmit }) {
             Chúng tôi sẽ giúp bạn xác định phương án phù hợp một cách nhẹ nhàng và rõ ràng.
           </p>
 
-          <div className="contact-cards">
+          <div className={styles.cards}>
             <article>
               <span>Hotline</span>
               <strong>028 6287 5666</strong>
@@ -26,7 +28,7 @@ export default function ContactSection({ feedback, onSubmit }) {
           </div>
         </div>
 
-        <form className="contact-form reveal delay-1" noValidate onSubmit={onSubmit}>
+        <form className={`card-surface reveal delay-1 ${styles.form}`} noValidate onSubmit={onSubmit}>
           <label>
             Họ và tên
             <input type="text" name="name" placeholder="Tên người liên hệ" required />
@@ -60,7 +62,7 @@ export default function ContactSection({ feedback, onSubmit }) {
           <button className="button button-primary button-full" type="submit">
             Gửi yêu cầu
           </button>
-          <p className="form-feedback" role="status" aria-live="polite">
+          <p className={styles.feedback} role="status" aria-live="polite">
             {feedback}
           </p>
         </form>

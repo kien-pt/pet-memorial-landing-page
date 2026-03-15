@@ -1,6 +1,7 @@
-import Icon from "./Icon";
-import { ProcessSteps } from "./LandingData";
-import SectionHeader from "./SectionHeader";
+import Icon from "../Icon";
+import { ProcessSteps } from "../LandingData";
+import SectionHeader from "../SectionHeader";
+import styles from "./ProcessSection.module.css";
 
 export default function ProcessSection() {
   return (
@@ -11,17 +12,17 @@ export default function ProcessSection() {
           title="Gia đình sẽ biết rõ từng bước tiếp theo để mọi việc diễn ra nhẹ nhàng và dễ theo dõi hơn."
         />
 
-        <div className="process-grid">
+        <div className={styles.grid}>
           {ProcessSteps.map((step, index) => (
             <article
               key={step.title}
-              className={`process-card card-surface reveal delay-${index + 1}`.replace(
+              className={`process-card card-surface ${styles.card} reveal delay-${index + 1}`.replace(
                 "delay-4",
                 "delay-3"
               )}
             >
-              <div className="process-head">
-                <span className="process-index">{String(index + 1).padStart(2, "0")}</span>
+              <div className={styles.head}>
+                <span className={styles.index}>{String(index + 1).padStart(2, "0")}</span>
                 <span className="process-icon">
                   <Icon name={step.icon} />
                 </span>

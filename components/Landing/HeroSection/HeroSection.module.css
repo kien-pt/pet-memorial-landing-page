@@ -1,0 +1,221 @@
+.hero {
+  padding-top: 84px;
+  padding-bottom: 56px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: 34px;
+  align-items: center;
+}
+
+.copy h1 {
+  margin: 0;
+  font-family: var(--font-serif), var(--font-serif-fallback);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  font-size: clamp(4rem, 10vw, 6.2rem);
+}
+
+.copy h1 span {
+  display: block;
+  color: rgba(30, 39, 35, 0.72);
+}
+
+.text {
+  max-width: 48ch;
+  margin-top: 24px;
+  font-size: 1.02rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.tag {
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 250, 244, 0.65);
+  border: 1px solid rgba(30, 39, 35, 0.08);
+  box-shadow: 0 10px 24px rgba(55, 43, 31, 0.05);
+  font-size: 0.92rem;
+}
+
+.stage {
+  display: grid;
+  gap: 18px;
+}
+
+.main {
+  position: relative;
+  min-height: 500px;
+  padding: 34px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.66), transparent 24%),
+    radial-gradient(circle at 82% 24%, rgba(114, 136, 127, 0.3), transparent 30%),
+    linear-gradient(150deg, rgba(43, 58, 53, 0.96), rgba(116, 138, 129, 0.42) 58%, rgba(255, 250, 244, 0.46));
+}
+
+.stageCopy {
+  position: relative;
+  z-index: 2;
+  max-width: 280px;
+  color: #fff;
+}
+
+.stageCopy :global(.card-label) {
+  color: rgba(255, 233, 214, 0.72);
+}
+
+.stageCopy h2 {
+  margin: 0;
+  font-family: var(--font-serif), var(--font-serif-fallback);
+  font-size: clamp(2rem, 4.2vw, 3.5rem);
+  line-height: 0.95;
+}
+
+.orbs {
+  position: absolute;
+  inset: 0;
+}
+
+.orbCard {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 24px 54px rgba(18, 28, 25, 0.22);
+  backdrop-filter: blur(10px);
+}
+
+.orbCard :global(img) {
+  object-fit: cover;
+}
+
+.orbLarge {
+  inset: auto 28px 34px auto;
+  width: 220px;
+  height: 160px;
+}
+
+.orbMedium {
+  inset: auto 180px 122px auto;
+  width: 140px;
+  height: 140px;
+}
+
+.orbSmall {
+  inset: 84px 42px auto auto;
+  width: 110px;
+  height: 110px;
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.panel {
+  min-height: 100%;
+  padding: 22px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgba(255, 250, 244, 0.76), rgba(248, 239, 231, 0.92));
+  border-color: rgba(183, 154, 124, 0.18);
+  box-shadow: 0 18px 42px rgba(55, 43, 31, 0.1);
+}
+
+.panel strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.panel p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+@media (max-width: 1120px) {
+  .grid,
+  .stack {
+    grid-template-columns: 1fr;
+  }
+
+  .copy h1 {
+    max-width: 9ch;
+  }
+}
+
+@media (max-width: 780px) {
+  .hero {
+    padding-top: 52px;
+    padding-bottom: 34px;
+  }
+
+  .copy h1 {
+    font-size: clamp(2.9rem, 13vw, 4.4rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .main,
+  .panel {
+    border-radius: 28px;
+  }
+
+  .main {
+    padding: 24px;
+  }
+
+  .actions,
+  .tags {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tag,
+  .actions :global(.button) {
+    width: 100%;
+  }
+
+  .orbLarge {
+    right: 18px;
+    bottom: 22px;
+    width: 170px;
+    height: 126px;
+  }
+
+  .orbMedium {
+    right: 132px;
+    bottom: 108px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .orbSmall {
+    top: 92px;
+    right: 18px;
+    width: 88px;
+    height: 88px;
+  }
+}

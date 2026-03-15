@@ -1,22 +1,30 @@
-import Icon from "./Icon";
-import { HeroHighlights } from "./LandingData";
+import Image from "next/image";
+import Icon from "../Icon";
+import { HeroHighlights } from "../LandingData";
+import styles from "./HeroSection.module.css";
+
+const heroVisuals = [
+  { src: "/images/private-cremation.svg", className: styles.orbLarge },
+  { src: "/images/farewell-ceremony.svg", className: styles.orbMedium },
+  { src: "/images/keepsake-gallery.svg", className: styles.orbSmall }
+];
 
 export default function HeroSection({ onQuickAssist }) {
   return (
-    <section className="hero section">
-      <div className="container hero-grid">
-        <div className="hero-copy reveal">
+    <section className={`${styles.hero} section`}>
+      <div className={`container ${styles.grid}`}>
+        <div className={`${styles.copy} reveal`}>
           <p className="eyebrow">Đồng hành nhẹ nhàng trong khoảnh khắc khó nói lời chào</p>
           <h1>
             Tiễn biệt bé yêu
             <span>trang nghiêm và dịu dàng.</span>
           </h1>
-          <p className="hero-text">
+          <p className={styles.text}>
             Chúng tôi giúp gia đình đi qua thời khắc khó khăn này bằng sự riêng tư, trân trọng
             và những lựa chọn đủ rõ ràng để bạn không phải bối rối thêm.
           </p>
 
-          <div className="hero-actions">
+          <div className={styles.actions}>
             <button className="button button-primary" type="button" onClick={() => onQuickAssist?.("urgent")}>
               Tư vấn nhanh 30 giây
             </button>
@@ -25,30 +33,32 @@ export default function HeroSection({ onQuickAssist }) {
             </a>
           </div>
 
-          <div className="hero-tags" aria-label="Điểm nổi bật">
+          <div className={styles.tags} aria-label="Điểm nổi bật">
             {HeroHighlights.map((item) => (
-              <span key={item} className="hero-tag">
+              <span key={item} className={styles.tag}>
                 {item}
               </span>
             ))}
           </div>
         </div>
 
-        <div className="hero-stage reveal delay-1">
-          <div className="stage-frame stage-main">
-            <div className="stage-copy">
+        <div className={`${styles.stage} reveal delay-1`}>
+          <div className={`stage-frame ${styles.main}`}>
+            <div className={styles.stageCopy}>
               <p className="card-label">Không gian tiễn biệt</p>
               <h2>Yên tĩnh, kín đáo và đầy tôn trọng</h2>
             </div>
-            <div className="stage-orbs">
-              <span></span>
-              <span></span>
-              <span></span>
+            <div className={styles.orbs} aria-hidden="true">
+              {heroVisuals.map((item) => (
+                <div key={item.src} className={`${styles.orbCard} ${item.className}`}>
+                  <Image src={item.src} alt="" fill sizes="(max-width: 780px) 70vw, 320px" />
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="stage-stack">
-            <article className="mini-panel">
+          <div className={styles.stack}>
+            <article className={`card-surface ${styles.panel}`}>
               <span className="mini-icon">
                 <Icon name="lotus" />
               </span>
@@ -58,7 +68,7 @@ export default function HeroSection({ onQuickAssist }) {
               </div>
             </article>
 
-            <article className="mini-panel">
+            <article className={`card-surface ${styles.panel}`}>
               <span className="mini-icon">
                 <Icon name="frame" />
               </span>

@@ -1,31 +1,15 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import Icon from "./Icon";
-import { Services } from "./LandingData";
-import SectionHeader from "./SectionHeader";
+import { useState } from "react";
+import { useScrollLock } from "../../../hooks/useScrollLock";
+import Icon from "../Icon";
+import { Services } from "../LandingData";
+import SectionHeader from "../SectionHeader";
 import styles from "./ServicesSection.module.css";
 
 export default function ServicesSection() {
   const [activeService, setActiveService] = useState(null);
 
-  useEffect(() => {
-    if (!activeService) return undefined;
-
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        setActiveService(null);
-      }
-    };
-
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.body.style.overflow = previousOverflow;
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [activeService]);
+  useScrollLock(Boolean(activeService), () => setActiveService(null));
 
   return (
     <section id="services" className="section">
