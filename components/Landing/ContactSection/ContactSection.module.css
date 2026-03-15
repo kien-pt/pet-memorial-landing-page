@@ -7,20 +7,22 @@
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
   gap: 34px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .panel,
 .form {
   padding: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .panel h2 {
-  margin: 0;
+  margin: 0 0 16px;
   font-family: var(--font-serif), var(--font-serif-fallback);
-  font-size: clamp(2.7rem, 6vw, 4.7rem);
-  line-height: 0.92;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .panel p,
@@ -90,6 +92,7 @@
 }
 
 @media (max-width: 560px) {
+
   .panel,
   .form {
     padding: 24px;

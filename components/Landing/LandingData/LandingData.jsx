@@ -38,8 +38,7 @@ export const Services = [
     text: "Mỗi bé được chăm sóc trong một hành trình riêng, nhẹ nhàng và tôn trọng trọn vẹn cảm xúc của gia đình.",
     details:
       "Dịch vụ phù hợp khi gia đình mong muốn một lời chào cuối kín đáo, rõ ràng về thời gian tiếp nhận, hỏa táng và bàn giao hũ tro cốt nghệ thuật.",
-    image:
-      "https://images.unsplash.com/photo-1767137652252-f1bedded19c0?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/service-private-cremation.png",
     imageAlt: "Không gian tiễn biệt và chăm sóc riêng tư"
   },
   {
@@ -49,8 +48,7 @@ export const Services = [
     text: "Không gian được chuẩn bị trang nhã với hoa, ánh sáng dịu và nghi thức phù hợp niềm tin của từng gia đình.",
     details:
       "Gia đình có thể lựa chọn lời nguyện ngắn, lễ cầu siêu, thời khắc riêng để chào tạm biệt hoặc hình thức thủy táng nhẹ nhàng nếu mong muốn.",
-    image:
-      "https://images.pexels.com/photos/33083323/pexels-photo-33083323.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: "/images/service-farewell-ceremony.png",
     imageAlt: "Không gian nghi thức tiễn biệt trang nhã"
   },
   {
@@ -60,8 +58,7 @@ export const Services = [
     text: "Hũ tro cốt nghệ thuật, dấu chân lưu niệm và các kỷ vật lưu giữ ký ức được chọn lọc để gia đình luôn có một điểm neo dịu dàng.",
     details:
       "Mỗi lựa chọn đều hướng đến cảm giác trang trọng và bền lâu, từ chất liệu, kích thước đến cách trưng bày trong không gian sống của gia đình.",
-    image:
-      "https://images.pexels.com/photos/8217492/pexels-photo-8217492.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: "/images/service-keepsake-urns.png",
     imageAlt: "Bộ sưu tập kỷ vật lưu giữ ký ức"
   }
 ];

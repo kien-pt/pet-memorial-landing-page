@@ -6,6 +6,7 @@ import { useReveal } from "../hooks/useReveal";
 import { useScrollLock } from "../hooks/useScrollLock";
 import BotpressChatWidget from "./BotpressChatWidget";
 import ContactSection from "./Landing/ContactSection";
+import FaqSection from "./Landing/FaqSection";
 import HeroSection from "./Landing/HeroSection";
 import MemorialSection from "./Landing/MemorialSection";
 import ProcessSection from "./Landing/ProcessSection";
@@ -24,11 +25,11 @@ export default function LandingPage() {
 
   useReveal();
   useScrollLock(assistOpen, () => setAssistOpen(false));
+  useScrollLock(navOpen, () => setNavOpen(false));
 
   function openAssist(option = null) {
     setAssistSelection(option);
     setAssistOpen(true);
-    setNavOpen(false);
   }
 
   return (

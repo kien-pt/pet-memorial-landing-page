@@ -5,15 +5,15 @@ import styles from "./MemorialSection.module.css";
 
 const memorialVisuals = [
   {
-    src: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=80",
+    src: "/images/memorial-online.png",
     alt: "Không gian lưu giữ hình ảnh và ký ức"
   },
   {
-    src: "https://images.pexels.com/photos/8217492/pexels-photo-8217492.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    src: "/images/memorial-urns.png",
     alt: "Kỷ vật lưu niệm được trưng bày trang nhã"
   },
   {
-    src: "https://images.pexels.com/photos/33083323/pexels-photo-33083323.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    src: "/images/memorial-space.png",
     alt: "Góc tưởng niệm yên bình với ánh sáng dịu"
   }
 ];

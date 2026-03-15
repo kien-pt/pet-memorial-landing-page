@@ -6,7 +6,7 @@ export default function ContactSection({ feedback, onSubmit }) {
       <div className={`container ${styles.grid}`}>
         <div className={`card-surface reveal ${styles.panel}`}>
           <p className="eyebrow">Liên hệ và hỗ trợ</p>
-          <h2>Chỉ cần để lại thông tin, đội ngũ sẽ sớm liên hệ để đồng hành cùng gia đình.</h2>
+          <h2>Vui lòng để lại thông tin</h2>
           <p>
             Nếu bạn cần được hướng dẫn ngay, hãy gọi hotline hoặc để lại số điện thoại.
             Chúng tôi sẽ giúp bạn xác định phương án phù hợp một cách nhẹ nhàng và rõ ràng.

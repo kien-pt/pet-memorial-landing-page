@@ -64,67 +64,40 @@
 
 .main {
   position: relative;
-  min-height: 500px;
+  min-height: 360px;
   padding: 34px;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.66), transparent 24%),
-    radial-gradient(circle at 82% 24%, rgba(114, 136, 127, 0.3), transparent 30%),
-    linear-gradient(150deg, rgba(43, 58, 53, 0.96), rgba(116, 138, 129, 0.42) 58%, rgba(255, 250, 244, 0.46));
+  background: #2b3a35;
+  /* Fallback */
+}
+
+.visualContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.heroImage {
+  object-fit: cover;
+  opacity: 0.85;
+  /* Soften the image */
+}
+
+.visualOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(150deg,
+      rgba(34, 49, 45, 0.92) 0%,
+      rgba(34, 49, 45, 0.4) 50%,
+      transparent 100%);
+  z-index: 2;
 }
 
 .stageCopy {
   position: relative;
-  z-index: 2;
-  max-width: 280px;
+  z-index: 3;
+  max-width: 320px;
   color: #fff;
-}
-
-.stageCopy :global(.card-label) {
-  color: rgba(255, 233, 214, 0.72);
-}
-
-.stageCopy h2 {
-  margin: 0;
-  font-family: var(--font-serif), var(--font-serif-fallback);
-  font-size: clamp(2rem, 4.2vw, 3.5rem);
-  line-height: 0.95;
-}
-
-.orbs {
-  position: absolute;
-  inset: 0;
-}
-
-.orbCard {
-  position: absolute;
-  overflow: hidden;
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 24px 54px rgba(18, 28, 25, 0.22);
-  backdrop-filter: blur(10px);
-}
-
-.orbCard :global(img) {
-  object-fit: cover;
-}
-
-.orbLarge {
-  inset: auto 28px 34px auto;
-  width: 220px;
-  height: 160px;
-}
-
-.orbMedium {
-  inset: auto 180px 122px auto;
-  width: 140px;
-  height: 140px;
-}
-
-.orbSmall {
-  inset: 84px 42px auto auto;
-  width: 110px;
-  height: 110px;
 }
 
 .stack {
@@ -156,6 +129,7 @@
 }
 
 @media (max-width: 1120px) {
+
   .grid,
   .stack {
     grid-template-columns: 1fr;
@@ -178,6 +152,7 @@
 }
 
 @media (max-width: 560px) {
+
   .main,
   .panel {
     border-radius: 28px;

@@ -3,12 +3,6 @@ import Icon from "../Icon";
 import { HeroHighlights } from "../LandingData";
 import styles from "./HeroSection.module.css";
 
-const heroVisuals = [
-  { src: "/images/private-cremation.svg", className: styles.orbLarge },
-  { src: "/images/farewell-ceremony.svg", className: styles.orbMedium },
-  { src: "/images/keepsake-gallery.svg", className: styles.orbSmall }
-];
-
 export default function HeroSection({ onQuickAssist }) {
   return (
     <section className={`${styles.hero} section`}>
@@ -44,16 +38,20 @@ export default function HeroSection({ onQuickAssist }) {
 
         <div className={`${styles.stage} reveal delay-1`}>
           <div className={`stage-frame ${styles.main}`}>
+            <div className={styles.visualContainer}>
+              <Image
+                src="/images/hero-sanctuary.png"
+                alt="Không gian tiễn biệt yên tĩnh và trang nghiêm"
+                fill
+                priority
+                className={styles.heroImage}
+                sizes="(max-width: 1120px) 100vw, 600px"
+              />
+              <div className={styles.visualOverlay} />
+            </div>
             <div className={styles.stageCopy}>
               <p className="card-label">Không gian tiễn biệt</p>
               <h2>Yên tĩnh, kín đáo và đầy tôn trọng</h2>
-            </div>
-            <div className={styles.orbs} aria-hidden="true">
-              {heroVisuals.map((item) => (
-                <div key={item.src} className={`${styles.orbCard} ${item.className}`}>
-                  <Image src={item.src} alt="" fill sizes="(max-width: 780px) 70vw, 320px" />
-                </div>
-              ))}
             </div>
           </div>
 

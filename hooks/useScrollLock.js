@@ -12,10 +12,12 @@ export function useScrollLock(isLocked, onEscape) {
     };
 
     document.body.style.overflow = "hidden";
+    document.body.classList.add("is-locked");
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       document.body.style.overflow = previousOverflow;
+      document.body.classList.remove("is-locked");
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isLocked, onEscape]);
