@@ -97,7 +97,7 @@ export default function LandingPage() {
         <ProcessSection />
         <TestimonialSection />
         <MemorialSection />
-        <FaqSection openFaq={openFaq} setOpenFaq={setOpenFaq} />
+        {/* <FaqSection openFaq={openFaq} setOpenFaq={setOpenFaq} /> */}
         <ContactSection feedback={feedback} onSubmit={handleSubmit} />
       </main>
 

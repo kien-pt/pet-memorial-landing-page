@@ -216,8 +216,9 @@ textarea {
 }
 
 .hero-copy h1 {
-  font-size: clamp(4rem, 10vw, 7rem);
-  max-width: 7.8ch;
+  /* font-size: clamp(3.4rem, 7.4vw, 5.8rem); */
+  font-size: clamp(4rem, 10vw, 6.2rem);
+  /* max-width: 7.8ch; */
 }
 
 .hero-copy h1 span {
@@ -480,10 +481,15 @@ textarea {
 
 .service-grid,
 .care-grid,
-.process-grid,
 .utility-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -996,10 +1002,13 @@ textarea {
   right: 20px;
   bottom: 20px;
   width: min(520px, calc(100vw - 24px));
+  max-height: calc(100dvh - 40px);
   padding: 28px;
   display: grid;
   align-content: start;
   gap: 18px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   transform: translateX(calc(100% + 24px));
   transition: transform 260ms ease;
 }
@@ -1133,13 +1142,16 @@ textarea {
   .contact-grid,
   .service-grid,
   .care-grid,
-  .process-grid,
   .utility-grid,
   .testimonial-grid,
   .memorial-grid,
   .editorial-grid,
   .trust-grid {
     grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .visual-row,
@@ -1202,7 +1214,7 @@ textarea {
   }
 
   .hero-copy h1 {
-    font-size: clamp(3.3rem, 18vw, 5rem);
+    font-size: clamp(2.9rem, 13vw, 4.4rem);
   }
 
   .section-head h2,
@@ -1313,5 +1325,19 @@ textarea {
   .ritual-panel,
   .assist-panel {
     padding: 24px;
+  }
+}
+
+.bpChatContainer >.bpFabWrapper {
+  bottom: 108px;
+}
+
+.bpChatContainer {
+  bottom: 1000px;
+}
+
+@media (max-width: 680px) {
+  .process-grid {
+    grid-template-columns: 1fr;
   }
 }
