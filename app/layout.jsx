@@ -3,7 +3,7 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 export const metadata = {
   title: "An Nhien Pet Memorial",
   description:
-    "Landing page giao dien dep, hien dai va trang nha cho website dich vu tang le thu cung."
+    "Dịch vụ tang lễ thú cưng chuyên nghiệp, tận tâm và trọn vẹn. Chúng tôi đồng hành cùng gia đình trong những giây phút sau cuối để tiễn biệt bạn nhỏ nhẹ nhàng nhất."
 };
 
 const manrope = Manrope({
@@ -20,7 +20,7 @@ const cormorantGaramond = Cormorant_Garamond({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="vi" className={`${manrope.variable} ${cormorantGaramond.variable}`}>
+    <html lang="vi" className={`${manrope.variable} ${cormorantGaramond.variable}`} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
